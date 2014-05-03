@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package GUI_Assignment4;
 
@@ -35,8 +31,6 @@ public class AddFacultyWindow extends javax.swing.JFrame {
      */
     public AddFacultyWindow() {
         initComponents();
-        
-        
     }
     
     public AddFacultyWindow(DataContainer container)
@@ -53,7 +47,6 @@ public class AddFacultyWindow extends javax.swing.JFrame {
             noClasses = new JLabel();
             noClasses.setText("There are no courses available.");
             classesPanel.add(noClasses);
-           // noClasses.setVisible(true);
             classesPanel.setLayout(new FlowLayout());
         }
         else if (!container.getClassrooms().isEmpty()){
@@ -67,11 +60,8 @@ public class AddFacultyWindow extends javax.swing.JFrame {
                 classCheck.setText(className);
                 allCheckBoxes.add(classCheck);              
             
-       
                 classesPanel.setLayout(new FlowLayout());
                 classesPanel.add(classCheck);
-            
-        
             }//end for-each
         }//end else-if
     }
@@ -333,25 +323,6 @@ public class AddFacultyWindow extends javax.swing.JFrame {
         GregorianCalendar dot = null;
         Double salary = 0.0;
         
-        
-        
-        /*hireDay = Integer.parseInt(dohDay.getText());
-        hireMonth = Integer.parseInt(dohMonth.getText());
-        hireYear = Integer.parseInt(dohYear.getText());
-        GregorianCalendar doh = new GregorianCalendar(hireMonth, hireDay, hireYear);
-        
-        birthDay = Integer.parseInt(dobDay.getText());
-        birthMonth = Integer.parseInt(dobMonth.getText());
-        birthYear = Integer.parseInt(dobYear.getText());
-        GregorianCalendar dob = new GregorianCalendar(birthMonth, birthDay, birthYear);
-        
-        termDay = Integer.parseInt(dotDay.getText());
-        termMonth = Integer.parseInt(dotMonth.getText());
-        termYear = Integer.parseInt(dotYear.getText());
-        GregorianCalendar dot = new GregorianCalendar(termMonth, termDay, termYear);*/
-        
-        
-        
         Faculty faculty = new Faculty();
         try{
             validateFields.validateText(nameInput.getText());
@@ -407,7 +378,7 @@ public class AddFacultyWindow extends javax.swing.JFrame {
         }catch(InvalidSalary e){
             JOptionPane.showMessageDialog(null, "Invalid Salary");
         }
-        //double salary = Double.parseDouble(salaryInput.getText());
+        
         faculty.setName(nameInput.getText());
         faculty.setAddress(addressInput.getText());
         faculty.setSSN(SSN);
@@ -415,8 +386,7 @@ public class AddFacultyWindow extends javax.swing.JFrame {
         faculty.setDateOfHire(doh);
         faculty.setDateOfTermination(dot);
         faculty.setSalary(salary);
-        
-        
+            
         if(fullButton.isSelected() == true)
         {
             status = 'f';
@@ -436,7 +406,7 @@ public class AddFacultyWindow extends javax.swing.JFrame {
             }
         faculty.setClasses(facultyClasses);
         
-        //this.fContainer.setTeachers().add(faculty);
+
         container.getTeachers().add(faculty);
     }//GEN-LAST:event_saveButtonActionPerformed
 

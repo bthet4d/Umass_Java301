@@ -14,10 +14,8 @@ public class Student extends Person{
     private float currentGpa;
     private ArrayList<StudentClass> studentClasses = new ArrayList<>();
     
-
-    public Student() {//Default Constructor
-
-    }
+    //Default Constructor
+    public Student() {}
     //Overridden Constructor
     public Student(GregorianCalendar dateOfGraduation, float currentGpa) {
         this.dateOfGraduation = dateOfGraduation;
@@ -39,8 +37,6 @@ public class Student extends Person{
     public void setCurrentGpa(float currentGpa) {
         this.currentGpa = currentGpa;
     }
-
-
 
     public ArrayList<StudentClass> getClasses() {
         return studentClasses;
@@ -65,19 +61,8 @@ public class Student extends Person{
                 getFormatter().format(dateOfGraduation.getTime()) + "\n" +
                 "GPA: " + currentGpa + "\n" + 
                 "Enrolled in: " + studentClasses + "\n";
-                
-                /*"Student{" + super.toString() + "dateOfGraduation=" + 
-                getFormatter().format(dateOfGraduation.getTime())+ 
-                ", currentGpa=" + currentGpa + ", studentClasses=" + 
-                studentClasses + '}';*/
     }
-
-    
-    
-
-    
-    
-    
+  
     public float calculateGPA(){
         
         float gradeTotal= 0;
@@ -112,6 +97,4 @@ public class Student extends Person{
         setCurrentGpa(currentGpa);
         return currentGpa;
     }
-    
-    
 }

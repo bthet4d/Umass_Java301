@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package TestStubs;
 
@@ -43,9 +39,10 @@ public class Assignment3TestClass {
        newStudent.setDateOfGraduation(dog);
        
        // Create a StudentClass using data from the offered class
-       StudentClass studentClass = new StudentClass(offeredClass.getClassIdNumber(), 
-                                                    offeredClass.getClassName(), 
-                                                    offeredClass.getClassroom());
+       StudentClass studentClass = new StudentClass
+                                       (offeredClass.getClassIdNumber(), 
+                                        offeredClass.getClassName(), 
+                                        offeredClass.getClassroom());
        
        // Add grades to StudentClass
        studentClass.getGrades().add(90.5f);
@@ -75,9 +72,10 @@ public class Assignment3TestClass {
        faculty.setDateOfHire(GregorianCalendarOfTermination);
     
        // Create a StudentClass using data from the offered class
-       FacultyClass facultyClass = new FacultyClass(offeredClass.getClassIdNumber(), 
-                                                    offeredClass.getClassName(), 
-                                                    offeredClass.getClassroom());
+       FacultyClass facultyClass = new FacultyClass
+                                                (offeredClass.getClassIdNumber(), 
+                                                 offeredClass.getClassName(), 
+                                                 offeredClass.getClassroom());
 
        // Add students to the class
        facultyClass.addStudent(newStudent);

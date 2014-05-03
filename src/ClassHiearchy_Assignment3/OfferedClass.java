@@ -4,7 +4,6 @@ package ClassHiearchy_Assignment3;
 import interfaces.IClass;
 import java.io.Serializable;
 
-
 /**
  *
  * @author bryan

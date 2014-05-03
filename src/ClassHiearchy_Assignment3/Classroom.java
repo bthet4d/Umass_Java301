@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package ClassHiearchy_Assignment3;
 
@@ -57,11 +52,5 @@ public class Classroom implements Serializable{
         return "Class:" + "\n" +
                 "Room Number: " + roomNumber + "\n" +
                 "Status: " + status + "\n";
-                /*"Classroom{" + "roomNumber=" + roomNumber + ", status=" + 
-                status + '}';*/
     }
-    
-    
-    
-    
 }

@@ -32,12 +32,4 @@ public class StudentClass extends OfferedClass{
     public String toString() {
         return this.getClassName() + " " + "grade: " + grades;
     }
-
-
-    
-    
-    
-
-    
-    
 }

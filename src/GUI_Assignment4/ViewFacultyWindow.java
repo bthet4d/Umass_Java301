@@ -1,23 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package GUI_Assignment4;
 
-import ClassHiearchy_Assignment3.Classroom;
 import ClassHiearchy_Assignment3.DataContainer;
 import ClassHiearchy_Assignment3.Faculty;
-import ClassHiearchy_Assignment3.FacultyClass;
 import java.awt.Component;
 import javax.swing.table.DefaultTableModel;
 import java.text.SimpleDateFormat;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
-
-
-
 /**
  *
  * @author Bryan
@@ -26,9 +16,6 @@ public class ViewFacultyWindow extends javax.swing.JFrame {
 
     private DataContainer container; 
     private DefaultTableModel tableModel;
-    
-    
-    
     /**
      * Creates new form ViewFacultyWindow
      */
@@ -39,9 +26,6 @@ public class ViewFacultyWindow extends javax.swing.JFrame {
     
     public ViewFacultyWindow(DataContainer container)
     {
-
-   
-        
         initComponents();
         this.container = container;
         SimpleDateFormat formatter = new SimpleDateFormat("MM-DD-YY");
@@ -73,14 +57,13 @@ public class ViewFacultyWindow extends javax.swing.JFrame {
                 faculty[5] = "full time";
             else if(teachers.getStatus() == 'p')
                 faculty[5] = "part time";
+            
             faculty[6] = teachers.getSSN();
             faculty[7] = teachers.getSalary();
 
             faculty[8] = teachers.getClasses().toString();
-            //System.out.println(teachers.toString());
             
             // add the ojbect to the table
-            
             tableModel.addRow(faculty);
         }
     
@@ -94,10 +77,7 @@ public class ViewFacultyWindow extends javax.swing.JFrame {
             width = Math.max(comp.getPreferredSize().width, width);
         }
         columnModel.getColumn(column).setPreferredWidth(width);
-    }
-        
-
-        
+    }  
     }
         
     

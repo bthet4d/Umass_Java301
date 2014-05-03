@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package GUI_Assignment4;
 
@@ -43,10 +39,7 @@ public class ViewStudentInfoWindow extends javax.swing.JFrame{
         
         studentTable.setModel(tableModel); 
         //studentPane.setViewportView(studentTable);
-        studentTable.setVisible(true);
-        
-
-        
+        studentTable.setVisible(true); 
         for(Student student : container.getStudents())
         {
             Object [] students = new Object [7];
@@ -77,9 +70,6 @@ public class ViewStudentInfoWindow extends javax.swing.JFrame{
         
     }
         
-    
-
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

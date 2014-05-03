@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package Validators;
 
@@ -18,16 +13,12 @@ import java.util.GregorianCalendar;
  * @author bryan
  */
 public class validateFields {
-    public validateFields()
-    {
-        
-    }
+    public validateFields(){}
     
     public static void validateText(String text) throws NoDataException
     {
         if(text.isEmpty())
         {
-            
             throw new NoDataException();
         }
     }

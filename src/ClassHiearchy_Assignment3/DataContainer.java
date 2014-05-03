@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package ClassHiearchy_Assignment3;
 
@@ -36,8 +31,7 @@ public class DataContainer implements Serializable{
     private File offeredSer = new File("offered.ser");
     
 
-    public DataContainer() {
-    }
+    public DataContainer() {}
     
     public DataContainer(ArrayList<Student> students, ArrayList<Faculty> teachers,
                          ArrayList<Classroom> classrooms, ArrayList<OfferedClass>
@@ -113,7 +107,6 @@ public class DataContainer implements Serializable{
             outFile.writeObject(teachers);
             outFile.close();
         }catch(Exception e){
-            //System.out.println("Error serializing teachers file.");
             throw new FileNotFoundException();
         }
     }
@@ -140,7 +133,6 @@ public class DataContainer implements Serializable{
             outFile.writeObject(offered);
             outFile.close();
         }catch(Exception e){
-            //System.out.println("Error serializing offered file.");
             throw new FileNotFoundException();
         }
     }
@@ -202,8 +194,8 @@ public class DataContainer implements Serializable{
             fos = new FileOutputStream("out.txt");
             dataOutput = new PrintWriter(fos);
          
-    } catch (IOException ioException) {
-         throw new RuntimeException("Error opening output file: out.txt");
+        } catch (IOException ioException) {
+            throw new RuntimeException("Error opening output file: out.txt");
     } 
 
    // Write each student record to a file
@@ -215,10 +207,6 @@ public class DataContainer implements Serializable{
         for(Faculty faculty : teachers){
             dataOutput.println(faculty.toString());
         }
-        
-        /*for(Classroom classroom: classrooms){
-            dataOutput.println(classroom.toString());
-        }*/
         
         for(OfferedClass offeredClass: offered){
             dataOutput.println(offeredClass.toString());

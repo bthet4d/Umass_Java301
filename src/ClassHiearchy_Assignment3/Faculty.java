@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package ClassHiearchy_Assignment3;
 
@@ -26,14 +21,11 @@ public class Faculty extends Person{
     //Currency formatting
     private final Locale locale = new Locale("en", "US");
     private final NumberFormat nmbFormatter = NumberFormat.getCurrencyInstance(locale);
-    
-    
-    
+
     //default constructor
     public Faculty(){
         this.salary = 0.0;
         this.status = 'c';//default status
-
     }
 
     public Faculty(double salary, char status) {
@@ -95,35 +87,17 @@ public class Faculty extends Person{
     public void addClass(FacultyClass c){
         classes.add(c);
     }
-
-    /*@Override
-    public String toString() {
-    return "Faculty: " + super.toString() + "Date of Termination = " +
-    getFormatter().format(dateOfTermination.getTime()) +
-    ", Date of Hire = " + getFormatter().format(dateOfHire.getTime()) +
-    ", salary = " + getSalary ()+ ", classes = " + classes + ", status = " +
-    status;
-    }*/
-    
-
     
     @Override
     public String toString() {
         return  "Faculty:" + "\n" + 
                 super.toString() + "\n" +
-               "Date of Hire: " + 
+                "Date of Hire: " + 
                 getFormatter().format(dateOfHire.getTime()) + "\n" +
                 "Date of Termination: " +
                 getFormatter().format(dateOfTermination.getTime()) + "\n" +
                 "Salary: " + salary + "\n" +
                 "Classes: " + classes + "\n" +
                 "Status: " + status + "\n";
-                /*"Faculty{" + super.toString() + "dateOfTermination=" + 
-                getFormatter().format(dateOfTermination.getTime()) + ", "
-                + "dateOfHire=" + getFormatter().format(dateOfHire.getTime()) + 
-                ", salary=" + salary + ", classes=" + classes + ", status=" + 
-                status + '}';*/
-    }
-    
-           
+    }          
 }
