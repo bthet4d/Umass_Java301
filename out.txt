@@ -1,0 +1,15 @@
+StudentName: Mindy Moss
+Address: 123 Main St.
+SSN: 123123123
+Date of Birth: 11-11-11
+Date of Graduation: 11-11-11
+GPA: 1.0
+Enrolled in: [Math grade: []]
+
+Offered Class:
+Name: Math
+Class Id #: 0.0Class:
+Room Number: 123 Main St.
+Status: l
+
+
